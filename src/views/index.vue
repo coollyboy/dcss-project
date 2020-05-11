@@ -8,8 +8,7 @@
             </ul>
         </div>
         <div class="aboutme">
-            <li class="listyle1">Who We Are</li>
-            <li class="listyle2">What Can We Do</li>
+            <li class="listyle1">Who We Are And Can Do For Your</li>
             <li class="listyle3">
                 北京鼎成盛世广告策划有限公司是集于广告、公关活动、企业策划、庆典策划、
                 会议会展与执行的综合型企业，总部坐落于北京本土通州北关绿地大厦，鼎成
@@ -42,6 +41,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@media only screen and (min-width: 751px) {
     .indexbox{
         width:100%;
         min-height: 100%;
@@ -82,7 +82,7 @@ export default {
         .aboutme{
             margin-top:100px;
             width:cale( 100% - 100px );
-            height: 400px;
+            height: 350px;
             background: #e7f6ff;
             padding:50px;
             .listyle1{
@@ -90,14 +90,7 @@ export default {
                 height: 100px;
                 font-size:50px;
                 font-weight: 700;
-                color:red;
-            }
-            .listyle2{
-                width:100%;
-                height: 100px;
-                font-size:50px;
-                font-weight: 700;
-                color:red;
+                color:white;
             }
             .listyle3{
                 width:100%;
@@ -109,4 +102,67 @@ export default {
             }
         }
     }
+}
+@media only screen and (max-width: 750px) {
+    .indexbox{
+        width:100%;
+        min-height: 100%;
+        margin-top:100px;
+        .guntxt{
+            width: 80%;
+            height: 350px;
+            margin:0 auto;
+            overflow: hidden;
+            background: #ffffff;
+            position: relative;
+            top:50px;
+        }
+        .ullist{
+            animation: myMove 20s linear infinite;
+            animation-fill-mode: forwards;
+            li{
+                height: 350px;
+                width:100%;
+                .name{
+                    width:100%;
+                    height: 350px;
+                    -webkit-background-size:cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+            }
+        }
+        @keyframes myMove {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-1750px);
+            }
+        }
+        .aboutme{
+            margin-top:100px;
+            width:cale( 100% - 100px );
+            min-height: 350px;
+            background: #e7f6ff;
+            padding:30px;
+            .listyle1{
+                width:100%;
+                min-height: 100px;
+                font-size:30px;
+                font-weight: 700;
+                color:white;
+            }
+            .listyle3{
+                width:100%;
+                min-height: 150px;
+                line-height: 30px;
+                font-size: 18px;
+                text-indent: 50px;
+                font-weight: 500;
+            }
+        }
+    }
+}
 </style>
